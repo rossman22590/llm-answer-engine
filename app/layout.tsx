@@ -12,13 +12,13 @@ import { Providers } from '@/components/providers';
 const meta = {
   title: 'answers, how they should be displayed.',
   description:
-    'anwser engine built by developers digest',
+    Datavibes Pro built by AI Tutor',
 };
 export const metadata: Metadata = {
   ...meta,
   title: {
-    default: 'answer website',
-    template: `%s - answer website`,
+    default: 'Datavibes Pro',
+    template: `%s - Datavibes Pro`,
   },
   icons: {
     icon: '/favicon.ico',
