@@ -12,7 +12,7 @@ import { Providers } from '@/components/providers';
 const meta = {
   title: 'answers, how they should be displayed.',
   description:
-    Datavibes Pro built by AI Tutor',
+   'Datavibes  built by AI Tutor',
 };
 export const metadata: Metadata = {
   ...meta,
