@@ -12,12 +12,29 @@
     <a href="https://trendshift.io/repositories/8642" target="_blank"><img src="https://trendshift.io/api/badge/repositories/8642" alt="developersdigest%2Fllm-answer-engine | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
     </div>
 </div>
-
-[Watch the tutorial here](https://youtu.be/kFC-OWw7G8k) for a detailed guide on setting up and running this project.
-
-![Example](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmJ0ZnhmNjkwYzczZDlqZzM1dDRka2k1MGx6dW02ZHl5dzV0aGQwMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mluzeYSMGoAnSXg0ft/giphy.gif)
+<div align="center">
+<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjVodHcyZWd0MDJtd2RiN2xqbGdtOTdrYzZiMnhlMmZidDRzYm15dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PXkHjFlbgty03C6TAL/giphy.gif"><br>
+</div>
 
 This repository contains the code and instructions needed to build a sophisticated answer engine that leverages the capabilities of [Groq](https://www.groq.com/), [Mistral AI's Mixtral](https://mistral.ai/news/mixtral-of-experts/), [Langchain.JS](https://js.langchain.com/docs/), [Brave Search](https://search.brave.com/), [Serper API](https://serper.dev/), and [OpenAI](https://openai.com/). Designed to efficiently return sources, answers, images, videos, and follow-up questions based on user queries, this project is an ideal starting point for developers interested in natural language processing and search technologies.
+
+## YouTube Tutorials
+
+<div style="display: flex; justify-content: center; align-items: center;">
+    <a href="https://youtu.be/43ZCeBTcsS8">
+        <img src="https://img.youtube.com/vi/43ZCeBTcsS8/0.jpg" alt="Tutorial 2" style="width: 24%; height: auto;">
+    </a>
+    <a href="https://youtu.be/kFC-OWw7G8k">
+        <img src="https://img.youtube.com/vi/kFC-OWw7G8k/0.jpg" alt="Tutorial 1" style="width: 24%; height: auto;">
+    </a>
+    <a href="https://youtu.be/kV2U7ttqE-g">
+        <img src="https://img.youtube.com/vi/kV2U7ttqE-g/0.jpg" alt="Tutorial 3" style="width: 24%; height: auto;">
+    </a>
+    <a href="https://youtu.be/3_aNVu6EU3Y">
+        <img src="https://img.youtube.com/vi/3_aNVu6EU3Y/0.jpg" alt="Tutorial 4" style="width: 24%; height: auto;">
+    </a>
+</div>
+
 
 ## Technologies Used
 
@@ -31,6 +48,7 @@ This repository contains the code and instructions needed to build a sophisticat
 - **OpenAI Embeddings**: Used for creating vector representations of text chunks.
 - **Cheerio**: Utilized for HTML parsing, allowing the extraction of content from web pages.
 - **Ollama (Optional)**: Used for streaming inference and embeddings.
+- **Upstash Redis Rate Limiting (Optional)**: Used for setting up rate limiting for the application.
 
 ## Getting Started
 
@@ -96,6 +114,7 @@ The configuration file is located in the `app/config.tsx` file. You can modify t
 - numberOfPagesToScan: 10, 
 - nonOllamaBaseURL: 'https://api.groq.com/openai/v1'
 - useFunctionCalling: true
+- useRateLimiting: false
 
 ### Function Calling Support (Beta)
 Currently, function calling is supported with the following capabilities:
@@ -119,25 +138,26 @@ More info: https://ollama.com/blog/openai-compatibility
 
 ### Roadmap
 
-
-![Example](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN284d3p5azAyNHpubm9mb2F0cnB6MWdtcTdnd2Nkb2d1ZnRtMG0yYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OMpt8ZbBsjphZz6mue/giphy.gif)
-
+- [] Add AI Gateway to support multiple models and embeddings. (OpenAI, Azure OpenAI, Anyscale, Google Gemini & Palm, Anthropic, Cohere, Together AI, Perplexity, Mistral, Nomic, AI21, Stability AI, DeepInfra, Ollama, etc)
+```https://github.com/Portkey-AI/gateway```
 - [] Add a settings component to allow users to select the model, embeddings model, and other parameters from the UI
 - [] Add support for follow-up questions when using Ollama
 - [Complete - Beta] Add support for dynamic and conditionally rendered UI components based on the user's query
 
-![Example](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjVodHcyZWd0MDJtd2RiN2xqbGdtOTdrYzZiMnhlMmZidDRzYm15dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PXkHjFlbgty03C6TAL/giphy.gif)
+![Example](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN284d3p5azAyNHpubm9mb2F0cnB6MWdtcTdnd2Nkb2d1ZnRtMG0yYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OMpt8ZbBsjphZz6mue/giphy.gif)
+
 - [Completed] Add dark mode support based on the user's system preference
 
 ![Example](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDQxdHR0NWc4MHl6cDBsNmpiMGNyeWNwbnE4MjZlb29oZGRsODBhMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QjINYAx6le5PMY020A/giphy.gif)
 
 ### Backend + Node Only Express API
 
-![Build a Perplexity-Inspired Answer Engine Using Groq, Mixtral, Langchain, Brave & OpenAI in 10 Min](https://img.youtube.com/vi/43ZCeBTcsS8/0.jpg)
-
+[Watch the express tutorial here](https://youtu.be/43ZCeBTcsS8) for a detailed guide on setting up and running this project.
 In addition to the Next.JS version of the project, there is a backend only version that uses Node.js and Express. Which is located in the 'express-api' directory. This is a standalone version of the project that can be used as a reference for building a similar API. There is also a readme file in the 'express-api' directory that explains how to run the backend version.
 
-[Watch the express tutorial here](https://youtu.be/43ZCeBTcsS8) for a detailed guide on setting up and running this project. 
+### Upstash Redis Rate Limiting
+[Watch the Upstash Redis Rate Limiting tutorial here](https://youtu.be/3_aNVu6EU3Y) for a detailed guide on setting up and running this project.
+Upstash Redis Rate Limiting is a free tier service that allows you to set up rate limiting for your application. It provides a simple and easy-to-use interface for configuring and managing rate limits. With Upstash, you can easily set limits on the number of requests per user, IP address, or other criteria. This can help prevent abuse and ensure that your application is not overwhelmed with requests.
 
 ## Contributing
 
