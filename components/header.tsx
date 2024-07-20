@@ -22,13 +22,13 @@ export function Header() {
           </a>
         </div>
         <span className="inline-flex items-center home-links whitespace-nowrap">
-          <a href="https://developersdigest.tech" rel="noopener" target="_blank">
-            <span className="block sm:inline text-lg sm:text-xl lg:text-2xl font-semibold dark:text-white text-black">answer <span className="linear-wipe">engine</span></span>
+          <a href="https://myapps.ai" rel="noopener" target="_blank">
+            <span className="block sm:inline text-lg sm:text-xl lg:text-2xl font-semibold dark:text-white text-black">Datavibes <span className="linear-wipe">Pro</span></span>
           </a>
         </span>
         <a
           target="_blank"
-          href="https://git.new/answr"
+          href="https://myapps.ai"
           rel="noopener noreferrer"
 
         >
